@@ -44,4 +44,7 @@ In one example, looping through 36,400 User records and accessing an
 attribute used 32% less memory and performed 17% quicker using
 `all_as_hashes` over `all`.
 
+## Tests
 
+Run tests with `bundle exec rake test` (or just `rake test` if you're
+daring).
