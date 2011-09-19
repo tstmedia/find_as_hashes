@@ -30,5 +30,5 @@ class Role < ActiveRecord::Base
   has_many :user
 end
 
-Fixtures.create_fixtures "test/Fixtures", :roles
+Fixtures.create_fixtures "test/fixtures", :roles
 Fixtures.create_fixtures "test/fixtures", :users
