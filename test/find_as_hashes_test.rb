@@ -37,6 +37,18 @@ class FindAsHashesTest < ActiveRecord::TestCase
         assert_equal @records.first.active_before_type_cast, @hashes.first["active"]
       end
     end
+
+    context "using `includes`" do
+      setup do
+      end
+
+      should "use the included relation in the query" do
+        assert_nothing_raised do
+          @hashes = User.includes(:role).where("roles.admin" => true).all_as_hashes
+          assert Role.where(@hashes.first["role_id"]).first.admin?
+        end
+      end
+    end
   end
 
   context "#first_as_hash" do
@@ -68,6 +80,18 @@ class FindAsHashesTest < ActiveRecord::TestCase
         assert_equal @record.name_before_type_cast, @hash["name"]
         assert_equal @record.birthday_before_type_cast, @hash["birthday"]
         assert_equal @record.active_before_type_cast, @hash["active"]
+      end
+    end
+
+    context "using `includes`" do
+      setup do
+      end
+
+      should "use the included relation in the query" do
+        assert_nothing_raised do
+          @hash = User.includes(:role).where("roles.admin" => true).first_as_hash
+          assert Role.where(@hash["role_id"]).first.admin?
+        end
       end
     end
   end

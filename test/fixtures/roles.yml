@@ -1,0 +1,12 @@
+admin:
+  name: "Admin"
+  admin: true
+guest:
+  name: "Guest"
+  admin: false
+user:
+  name: "User"
+  admin: false
+staff:
+  name: "Corporate Staff"
+  admin: true

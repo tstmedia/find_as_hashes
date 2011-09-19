@@ -3,4 +3,5 @@ user<%= n %>:
   name: Example User <%= n %>
   birthday: <%= n.weeks.ago %>
   active: <%= n.even? %>
+  role_id: <%= Role.all.map(&:id)[n % 4] %>
 <% end %>
