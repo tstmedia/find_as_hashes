@@ -4,3 +4,8 @@ rvm:
   - ree
   - ruby-head
   - rbx-2.0
+notifications:
+  # overriding this so that TST Media's email account doesn't get spammed
+  # feel free to add yourselves if you want in on this action
+  email:
+    - patrick.byrne@tstmedia.com
