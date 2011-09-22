@@ -5,10 +5,6 @@ of your ActiveRecord methods.
 
 ## Methods
 
-Both methods assume that you've constructed some sort of ARel-style
-query (e.g., regular queries like `Customer.where("balance" > 5000)` or
-scopes like `User.active`).
-
 The hashes that return are similar to the hash that returns with
 [`ActiveRecord::Base#attributes`][attrs_method], except values are not
 coerced (e.g., a tinyint column containing `1` will not be coerced into
@@ -16,10 +12,10 @@ coerced (e.g., a tinyint column containing `1` will not be coerced into
 Ruby object. Booleans will return the underlying representation and
 serialized objects will return as strings.
 
-* `all_as_hashes` performs the search that you've set up and returns the
-  results as an array of hashes.
-* `first_as_hash` performs the search that you've set up and returns a
-  hash of the first matching record.
+* `all_as_hashes` works similarly to `all`, but returns the results as
+  an array of hashes.
+* `first_as_hash` works similarly to `first`, but returns a hash of the
+  first matching record.
 
 [attrs_method]:http://api.rubyonrails.org/classes/ActiveRecord/Base.html#method-i-attributes
 
