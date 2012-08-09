@@ -1,3 +1,5 @@
+[![TravisCI](https://secure.travis-ci.org/tstmedia/find_as_hashes.png "TravisCI")](http://travis-ci.org/tstmedia/find_as_hashes "Travis-CI FindAsHashes")
+
 Adds methods to return attribute hashes rather than instantiated
 ActiveRecord objects. This is useful when working with large sets of
 records and you need the performance more than you need the convenience
