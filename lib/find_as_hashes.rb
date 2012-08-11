@@ -1,5 +1,6 @@
 require "find_as_hashes/version"
 require 'active_record'
+require 'active_support/core_ext'
 
 module FindAsHashes
 
