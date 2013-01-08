@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    find_as_hashes (0.3.0)
+    find_as_hashes (0.4.0)
       activerecord
 
 GEM
