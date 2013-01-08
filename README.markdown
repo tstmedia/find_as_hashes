@@ -62,6 +62,13 @@ The hashes that return are essentially the xml or json data hashified.
 * `last_as_hash` works similarly to `last`, but returns a hash of the
   last matching record.
 
+## Usage
+
+To enable the use of these methods, simply add this line to the top of your
+ActiveResource class.
+
+`require 'active_resource/find_as_hashes'`
+
 ## Examples
 
     > User.all_as_hashes(:active => 1)
